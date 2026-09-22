@@ -1,0 +1,198 @@
+:root {
+  color-scheme: light;
+  --color-bg: #f7f7f4;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f1f1ed;
+  --color-ink: #111111;
+  --color-ink-soft: #272727;
+  --color-muted: #6f6f68;
+  --color-line: #e4e4dc;
+  --color-red: #f70707;
+  --color-red-dark: #c80404;
+  --color-dark: #101010;
+  --color-dark-2: #191919;
+  --shadow-soft: 0 18px 50px rgba(17, 17, 17, 0.08);
+  --shadow-phone: 0 28px 70px rgba(17, 17, 17, 0.23);
+  --page-x: 28px;
+  --shell: 1180px;
+  --header-h: 78px;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: inherit;
+  text-rendering: geometricPrecision;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-color: var(--color-bg);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(247, 7, 7, 0.34);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-red);
+  color: #ffffff;
+}
+
+.section-shell {
+  width: min(var(--shell), calc(100% - (var(--page-x) * 2)));
+  margin-inline: auto;
+}
+
+.section-heading {
+  max-width: 700px;
+}
+
+.section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading--dark {
+  color: #ffffff;
+}
+
+.eyebrow,
+.badge {
+  margin: 0 0 18px;
+  color: var(--color-red);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading h2,
+.hero h1,
+.how h2,
+.progress-section h2,
+.faq h2,
+.final-cta h2 {
+  margin: 0;
+  max-width: 760px;
+  color: inherit;
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.section-heading h2,
+.how h2,
+.progress-section h2,
+.faq h2,
+.final-cta h2 {
+  font-size: 3.4rem;
+}
+
+.section-heading p,
+.hero__lead,
+.how p,
+.progress-section p,
+.faq p,
+.final-cta p {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.section-heading--dark p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 680ms ease,
+    transform 680ms ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clean-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.clean-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.clean-list svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-red);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,49 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <rect width="430" height="932" rx="0" fill="#f5f5f2" />
+  <rect x="0" y="0" width="430" height="176" fill="#ffffff" />
+  <circle cx="374" cy="76" r="24" fill="#f70707" />
+  <circle cx="374" cy="76" r="8" fill="#ffffff" />
+  <text x="38" y="74" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f70707" letter-spacing="1.8">MEDIDAS RECENTES</text>
+  <text x="38" y="125" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="900" fill="#121212">Avaliacao</text>
+
+  <rect x="38" y="205" width="354" height="190" rx="32" fill="#121212" />
+  <text x="68" y="269" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="900" fill="#ffffff">12.8%</text>
+  <text x="72" y="313" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#ffffff">gordura</text>
+  <rect x="68" y="343" width="112" height="12" rx="6" fill="#f70707" />
+  <rect x="196" y="343" width="68" height="12" rx="6" fill="#ffffff" opacity="0.34" />
+  <rect x="276" y="343" width="46" height="12" rx="6" fill="#ffffff" opacity="0.22" />
+
+  <rect x="38" y="425" width="354" height="201" rx="28" fill="#ffffff" stroke="#e7e7e1" />
+  <text x="62" y="462" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#73736c">ATIVIDADES</text>
+  
+        <g>
+          <rect x="38" y="472" width="354" height="52" rx="18" fill="#ffffff" stroke="#e7e7e1" />
+          <circle cx="70" cy="498" r="14" fill="#f70707" />
+          <text x="96" y="504" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#121212">Peso 78.2 kg</text>
+          <text x="334" y="504" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#f70707">1x</text>
+        </g>
+      
+        <g>
+          <rect x="38" y="544" width="354" height="52" rx="18" fill="#ffffff" stroke="#e7e7e1" />
+          <circle cx="70" cy="570" r="14" fill="#171717" />
+          <text x="96" y="576" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#121212">Torax 102 cm</text>
+          <text x="334" y="576" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#f70707">2x</text>
+        </g>
+      
+        <g>
+          <rect x="38" y="616" width="354" height="52" rx="18" fill="#ffffff" stroke="#e7e7e1" />
+          <circle cx="70" cy="642" r="14" fill="#171717" />
+          <text x="96" y="648" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#121212">Cintura 78 cm</text>
+          <text x="334" y="648" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#f70707">3x</text>
+        </g>
+      
+
+  <rect x="38" y="662" width="354" height="206" rx="30" fill="#ffffff" stroke="#e7e7e1" />
+  <text x="62" y="706" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#73736c">EVOLUCAO</text>
+  <path d="M 58 756.64 L 104 764.08 L 150 772.76 L 196 777.72 L 242 783.92 L 288 791.36 L 334 795.08" fill="none" stroke="#e7e7e1" stroke-width="3" />
+  <path d="M 58 756.64 L 104 764.08 L 150 772.76 L 196 777.72 L 242 783.92 L 288 791.36 L 334 795.08" fill="none" stroke="#f70707" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="62" y="668" width="22" height="92" rx="11" fill="#f70707" opacity="1" /><rect x="107" y="676" width="22" height="84" rx="11" fill="#202020" opacity="0.92" /><rect x="152" y="687" width="22" height="73" rx="11" fill="#f70707" opacity="1" /><rect x="197" y="692" width="22" height="68" rx="11" fill="#202020" opacity="0.92" /><rect x="242" y="700" width="22" height="60" rx="11" fill="#f70707" opacity="1" /><rect x="287" y="708" width="22" height="52" rx="11" fill="#202020" opacity="0.92" /><rect x="332" y="712" width="22" height="48" rx="11" fill="#f70707" opacity="1" />
+  <rect x="60" y="816" width="128" height="12" rx="6" fill="#121212" opacity="0.12" />
+  <rect x="60" y="840" width="220" height="12" rx="6" fill="#121212" opacity="0.08" />
+</svg>

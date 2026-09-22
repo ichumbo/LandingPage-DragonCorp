@@ -1,0 +1,514 @@
+@media (max-width: 1120px) {
+  :root {
+    --page-x: 22px;
+  }
+
+  .landing-header__nav {
+    gap: 18px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+    gap: 34px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .phone--hero {
+    --phone-w: 270px;
+  }
+
+  .ring--one {
+    width: 450px;
+    height: 450px;
+  }
+
+  .ring--two {
+    width: 330px;
+    height: 330px;
+  }
+
+  .phone-pair {
+    right: 24px;
+  }
+
+  .showcase-grid,
+  .dual__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-card--progress {
+    grid-template-columns: minmax(0, 1fr) 240px;
+  }
+
+  .dual-panel {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 920px) {
+  .section-heading h2,
+  .how h2,
+  .progress-section h2,
+  .faq h2,
+  .final-cta h2 {
+    font-size: 2.7rem;
+  }
+
+  .landing-header {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .landing-header__nav,
+  .landing-header__cta {
+    display: none;
+  }
+
+  .landing-header__menu {
+    display: inline-grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    justify-self: end;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--color-ink);
+  }
+
+  .landing-header__menu svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 14px;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .mobile-nav.is-open {
+    display: grid;
+    gap: 12px;
+  }
+
+  .mobile-nav a:not(.btn) {
+    padding: 10px 6px;
+  }
+
+  .hero,
+  .how,
+  .progress-section,
+  .faq,
+  .final-cta__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 44px;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero__lead,
+  .hero__metrics,
+  .section-heading h2,
+  .how h2,
+  .progress-section h2,
+  .faq h2,
+  .final-cta h2 {
+    margin-inline: auto;
+  }
+
+  .hero__actions,
+  .hero__stores {
+    justify-content: center;
+  }
+
+  .hero__visual,
+  .how__visual,
+  .progress-section__visual,
+  .faq__visual {
+    min-height: 560px;
+  }
+
+  .hero__visual {
+    margin-top: 0;
+  }
+
+  .dark-showcase__inner,
+  .final-cta__inner {
+    padding: 44px;
+  }
+
+  .benefits__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .progress-section {
+    gap: 42px;
+    padding: 84px 0;
+  }
+
+  .final-cta__phones {
+    min-height: 390px;
+  }
+
+  .landing-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .landing-footer nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --page-x: 18px;
+    --header-h: 70px;
+  }
+
+  body::before {
+    background-image: none;
+  }
+
+  .landing-header__brand,
+  .landing-header__brand img {
+    width: 150px;
+  }
+
+  .hero {
+    padding-bottom: 66px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero__lead,
+  .section-heading p,
+  .how p,
+  .progress-section p,
+  .faq p,
+  .final-cta p {
+    font-size: 1rem;
+  }
+
+  .hero__actions .btn,
+  .final-cta__actions .btn {
+    width: 100%;
+  }
+
+  .hero__stores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .store-button {
+    min-width: 0;
+    padding-inline: 12px;
+  }
+
+  .store-button span {
+    font-size: 0.84rem;
+  }
+
+  .hero__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .hero__metrics div {
+    padding: 12px 7px;
+  }
+
+  .hero__metrics dt {
+    font-size: 1.18rem;
+  }
+
+  .hero__metrics dd {
+    font-size: 0.6rem;
+  }
+
+  .progress-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__visual,
+  .how__visual,
+  .progress-section__visual,
+  .faq__visual {
+    min-height: 510px;
+  }
+
+  .phone--hero {
+    --phone-w: 246px;
+  }
+
+  .phone--lg {
+    --phone-w: 234px;
+  }
+
+  .phone--md {
+    --phone-w: 196px;
+  }
+
+  .phone--sm {
+    --phone-w: 158px;
+  }
+
+  .ring--one {
+    width: 330px;
+    height: 330px;
+  }
+
+  .ring--two {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero__marker--top {
+    top: 54px;
+    right: 0;
+  }
+
+  .hero__marker--bottom {
+    bottom: 54px;
+    left: 0;
+  }
+
+  .intro,
+  .benefits,
+  .dual,
+  .faq {
+    padding: 70px 0;
+  }
+
+  .intro-board {
+    min-height: 510px;
+    margin-top: 36px;
+  }
+
+  .mini-card--profile {
+    top: 36px;
+    left: 0;
+  }
+
+  .mini-card--metric {
+    right: 0;
+    bottom: 54px;
+  }
+
+  .mini-dashboard {
+    left: 0;
+    bottom: 148px;
+    width: min(310px, 92%);
+  }
+
+  .dark-showcase__inner,
+  .final-cta__inner {
+    padding: 34px 20px;
+    border-radius: 24px;
+  }
+
+  .showcase-card,
+  .dual-panel {
+    padding: 24px;
+  }
+
+  .showcase-card--students,
+  .showcase-card--progress,
+  .dual-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-card--students {
+    min-height: 650px;
+  }
+
+  .showcase-card--training {
+    min-height: 560px;
+  }
+
+  .showcase-card--progress {
+    min-height: 620px;
+  }
+
+  .showcase-card__phone,
+  .showcase-card__dashboard,
+  .dual-panel__phone {
+    justify-self: center;
+    margin-bottom: -90px;
+  }
+
+  .phone-pair {
+    right: 24px;
+    bottom: -62px;
+  }
+
+  .benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how {
+    gap: 32px;
+    padding: 70px 0;
+  }
+
+  .step-item {
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+  }
+
+  .step-item > span {
+    width: 52px;
+    height: 52px;
+  }
+
+  .step-list::before {
+    left: 26px;
+  }
+
+  .dual-panel {
+    min-height: 590px;
+  }
+
+  .dual-panel h3,
+  .showcase-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .faq-card {
+    right: 0;
+  }
+
+  .final-cta {
+    padding-bottom: 70px;
+  }
+
+  .final-cta__inner {
+    min-height: 720px;
+    align-items: start;
+  }
+
+  .final-cta__phones {
+    min-height: 360px;
+  }
+
+  .final-phone {
+    bottom: -140px;
+  }
+
+  .final-phone--one {
+    left: -6px;
+  }
+
+  .final-phone--three {
+    right: -6px;
+  }
+}
+
+@media (max-width: 430px) {
+  :root {
+    --page-x: 14px;
+  }
+
+  .section-heading h2,
+  .how h2,
+  .progress-section h2,
+  .faq h2,
+  .final-cta h2 {
+    font-size: 2.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2.55rem;
+  }
+
+  .badge {
+    justify-content: center;
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .hero__metrics div {
+    padding: 11px 6px;
+  }
+
+  .badge {
+    letter-spacing: 0.07em;
+  }
+
+  .hero__visual,
+  .how__visual,
+  .progress-section__visual,
+  .faq__visual {
+    min-height: 468px;
+  }
+
+  .phone--hero {
+    --phone-w: 220px;
+  }
+
+  .phone--lg {
+    --phone-w: 214px;
+  }
+
+  .phone--md {
+    --phone-w: 178px;
+  }
+
+  .phone--sm {
+    --phone-w: 142px;
+  }
+
+  .phone--xs {
+    --phone-w: 128px;
+  }
+
+  .mini-dashboard {
+    grid-template-columns: 1fr repeat(5, 14px);
+    gap: 7px;
+  }
+
+  .mini-dashboard span {
+    width: 14px;
+  }
+
+  .showcase-card--students,
+  .showcase-card--progress {
+    min-height: 600px;
+  }
+
+  .showcase-card--training {
+    min-height: 520px;
+  }
+
+  .dual-panel {
+    min-height: 548px;
+  }
+
+  .accordion__trigger {
+    padding: 17px;
+  }
+
+  .final-cta__inner {
+    min-height: 670px;
+  }
+
+  .landing-footer nav {
+    gap: 14px;
+  }
+}
