@@ -1,55 +1,63 @@
+/* =====================================================================
+   DragonCorp · base
+   Tokens, reset, tipografia e sistema de revelação no scroll.
+   Identidade: minimalista, escura, flat — sem gradientes.
+   ===================================================================== */
+
 :root {
-  color-scheme: light;
-  --color-bg: #f7f7f4;
-  --color-surface: #ffffff;
-  --color-surface-soft: #f1f1ed;
-  --color-ink: #111111;
-  --color-ink-soft: #272727;
-  --color-muted: #6f6f68;
-  --color-line: #e4e4dc;
-  --color-red: #f70707;
-  --color-red-dark: #c80404;
-  --color-dark: #101010;
-  --color-dark-2: #191919;
-  --shadow-soft: 0 18px 50px rgba(17, 17, 17, 0.08);
-  --shadow-phone: 0 28px 70px rgba(17, 17, 17, 0.23);
-  --page-x: 28px;
-  --shell: 1180px;
-  --header-h: 78px;
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: #0a0a0a;
+  --bg-soft: #101010;
+  --bg-card: #121212;
+  --bg-card-hot: #160d0d;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --text: #f2f0ec;
+  --muted: #a29f99;
+  --faint: #6e6c67;
+  --red: #f80000;
+  --red-bright: #ff2424;
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --container: 1180px;
+  --radius: 18px;
+  --header-h: 76px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  background: var(--color-bg);
-  color: var(--color-ink);
-  font-family: inherit;
-  text-rendering: geometricPrecision;
 }
 
+/* textura de grão fino (textura flat, não é gradiente) */
 body::before {
+  content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 2000;
   pointer-events: none;
-  content: "";
-  background-color: var(--color-bg);
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -59,140 +67,174 @@ a {
   text-decoration: none;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
 button {
-  border: 0;
-}
-
-:focus-visible {
-  outline: 3px solid rgba(247, 7, 7, 0.34);
-  outline-offset: 4px;
-}
-
-::selection {
-  background: var(--color-red);
-  color: #ffffff;
-}
-
-.section-shell {
-  width: min(var(--shell), calc(100% - (var(--page-x) * 2)));
-  margin-inline: auto;
-}
-
-.section-heading {
-  max-width: 700px;
-}
-
-.section-heading--center {
-  margin-inline: auto;
-  text-align: center;
-}
-
-.section-heading--dark {
-  color: #ffffff;
-}
-
-.eyebrow,
-.badge {
-  margin: 0 0 18px;
-  color: var(--color-red);
-  font-size: 0.78rem;
-  font-weight: 850;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.section-heading h2,
-.hero h1,
-.how h2,
-.progress-section h2,
-.faq h2,
-.final-cta h2 {
-  margin: 0;
-  max-width: 760px;
+  font: inherit;
   color: inherit;
-  font-weight: 900;
-  line-height: 0.98;
-  letter-spacing: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
 
-.section-heading h2,
-.how h2,
-.progress-section h2,
-.faq h2,
-.final-cta h2 {
-  font-size: 3.4rem;
-}
-
-.section-heading p,
-.hero__lead,
-.how p,
-.progress-section p,
-.faq p,
-.final-cta p {
-  color: var(--color-muted);
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
-
-.section-heading--dark p {
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 680ms ease,
-    transform 680ms ease;
-}
-
-.reveal--visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.clean-list {
-  display: grid;
-  gap: 12px;
-  padding: 0;
-  margin: 0;
+ul {
   list-style: none;
 }
 
-.clean-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--color-muted);
-  font-size: 0.95rem;
-  font-weight: 700;
+::selection {
+  background: var(--red);
+  color: #0a0a0a;
 }
 
-.clean-list svg {
-  width: 18px;
-  height: 18px;
-  color: var(--color-red);
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.02;
+}
+
+.container {
+  width: min(var(--container), 100% - 48px);
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding: clamp(84px, 11vw, 148px) 0;
+  scroll-margin-top: calc(var(--header-h) + 10px);
+}
+
+/* ---------- rótulo de seção ---------- */
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.kicker::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--red);
+}
+
+.kicker--center {
+  justify-content: center;
+}
+
+.kicker--center::after {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--red);
+}
+
+/* ---------- cabeçalho de seção ---------- */
+
+.section__head {
+  max-width: 660px;
+  margin-bottom: clamp(44px, 6vw, 68px);
+}
+
+.section__head--split {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: none;
+}
+
+.section__title {
+  margin-top: 18px;
+  font-size: clamp(2.4rem, 5.2vw, 4.1rem);
+}
+
+.section__lead {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.section__lead--center {
+  margin-inline: auto;
+}
+
+/* ---------- revelação no scroll ----------
+   Estados iniciais só existem quando o JS está ativo (html.js),
+   para o conteúdo nunca ficar invisível sem JavaScript. */
+
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out);
+  transition-delay: var(--rd, 0ms);
+}
+
+.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* título revelado linha a linha (máscara) */
+[data-mask] .mask-line {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.08em;
+  margin-block: -0.08em;
+}
+
+.js [data-mask] .mask-line > span {
+  display: block;
+  transform: translateY(115%);
+  transition: transform 1s var(--ease-out);
+}
+
+.js [data-mask].is-in .mask-line:nth-child(1) > span {
+  transform: none;
+  transition-delay: 0.05s;
+}
+
+.js [data-mask].is-in .mask-line:nth-child(2) > span {
+  transform: none;
+  transition-delay: 0.16s;
+}
+
+.js [data-mask].is-in .mask-line:nth-child(3) > span {
+  transform: none;
+  transition-delay: 0.27s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 1ms !important;
+  html {
+    scroll-behavior: auto;
   }
 
-  .reveal {
+  .js [data-reveal],
+  .js [data-mask] .mask-line > span {
+    transition: none;
+  }
+
+  .js [data-reveal] {
     opacity: 1;
+    transform: none;
+  }
+
+  .js [data-mask] .mask-line > span {
     transform: none;
   }
 }
