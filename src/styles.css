@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #ededed;
+  background-color: #0a0a0a;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0a;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
+  color: #ededed;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.display {
+  font-family: 'Archivo', sans-serif;
+}
+
+.hero-title {
+  font-family: 'Archivo', 'Manrope', sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.page-container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    width: min(100% - 32px, 1200px);
+  }
+}
+
+/* Solid Brand Colors - No Artificial Gradients */
+.brand-red {
+  background-color: #b91119;
+}
+
+.brand-red-hover:hover {
+  background-color: #ce141d;
+}
+
+.button-solid-red {
+  background-color: #b91119;
+  color: #ffffff;
+}
+
+.button-solid-red:hover {
+  background-color: #ce141d;
+}
+
+.glass-dark {
+  background-color: rgba(18, 18, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-solid {
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle dot grid pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+::selection {
+  background-color: #b91119;
+  color: #ffffff;
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91119;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
